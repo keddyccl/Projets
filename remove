@@ -1,0 +1,16 @@
+class Solution {
+public:
+    int removeElement(vector<int>& nums, int val) {
+        std::vector<int>result;
+        int k=0;
+        for (int i = 0; i < nums.size(); ++i) {
+            if (nums[i] != val) {
+                result.push_back(nums[i]);
+                ++k;
+            }
+        }
+
+        nums = result;  // Update the original vector with the filtered result
+        return k; // Return a pair containing count and modified vector
+    }
+};
